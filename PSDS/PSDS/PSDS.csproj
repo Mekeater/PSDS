@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD7E31F0-1612-4FA4-A066-5834384F6D8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PSDS</RootNamespace>
+    <AssemblyName>PSDS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Clock.cs" />
+    <Compile Include="Common\HelpDescriptions.cs" />
+    <Compile Include="Common\InvokeProcess.cs" />
+    <Compile Include="Common\JournalClass.cs" />
+    <Compile Include="DataStruct\FluentEnum.cs" />
+    <Compile Include="DataStruct\GlobleVariable.cs" />
+    <Compile Include="DataStruct\IJournal.cs" />
+    <Compile Include="FluentClass\BCParametersClass.cs" />
+    <Compile Include="FluentClass\BoundaryConditionImp.cs" />
+    <Compile Include="FluentClass\BoundaryConditionSet.cs" />
+    <Compile Include="FluentClass\IEnOFF_ViscousOFF.cs" />
+    <Compile Include="FluentClass\IEnOFF_ViscousON.cs" />
+    <Compile Include="FluentClass\IEnON_ViscousOFF_RadiationOFF_SpeciesON.cs" />
+    <Compile Include="FluentClass\IEnON_ViscousOFF_RadiationON_SpeciesOFF.cs" />
+    <Compile Include="FluentClass\IEnON_ViscousOFF_RadiationON_SpeciesON.cs" />
+    <Compile Include="FluentClass\IEnON_ViscousON_RadiationOFF_SpeciesON.cs" />
+    <Compile Include="FluentClass\IEnON_ViscousON_RadiationON_SpeciesOFF.cs" />
+    <Compile Include="FluentClass\IEnON_ViscousON_RadiationON_SpeciesON.cs" />
+    <Compile Include="FluentClass\MeshInfoClass.cs" />
+    <Compile Include="FluentSetForm\BoundaryConditionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryConditionsForm.Designer.cs">
+      <DependentUpon>BoundaryConditionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\MassFlowInletMomentumTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\MassFlowInletMomentumTabForm.Designer.cs">
+      <DependentUpon>MassFlowInletMomentumTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\MassFlowOutletMomentumTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\MassFlowOutletMomentumTabForm.Designer.cs">
+      <DependentUpon>MassFlowOutletMomentumTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\PressureInletMomentumTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\PressureInletMomentumTabForm.Designer.cs">
+      <DependentUpon>PressureInletMomentumTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\PressureOutletMomentumTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\PressureOutletMomentumTabForm.Designer.cs">
+      <DependentUpon>PressureOutletMomentumTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\RadiationTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\RadiationTabForm.Designer.cs">
+      <DependentUpon>RadiationTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\SpeciesTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\SpeciesTabForm.Designer.cs">
+      <DependentUpon>SpeciesTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\ThermalTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\ThermalTabForm.Designer.cs">
+      <DependentUpon>ThermalTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\VelocityInletMomentumTabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\BoundaryTypeForm\VelocityInletMomentumTabForm.Designer.cs">
+      <DependentUpon>VelocityInletMomentumTabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\CalculationDataExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\CalculationDataExportForm.Designer.cs">
+      <DependentUpon>CalculationDataExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\InitiallizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\InitiallizationForm.Designer.cs">
+      <DependentUpon>InitiallizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\MaterialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\MaterialsForm.Designer.cs">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\MethodsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\MethodsForm.Designer.cs">
+      <DependentUpon>MethodsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\ModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\ModelForm.Designer.cs">
+      <DependentUpon>ModelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\ModelsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\ModelsForm.Designer.cs">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\ProfileSimulationParametersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\ProfileSimulationParametersForm.Designer.cs">
+      <DependentUpon>ProfileSimulationParametersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\RunCalculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\RunCalculationForm.Designer.cs">
+      <DependentUpon>RunCalculationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\RunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\RunForm.Designer.cs">
+      <DependentUpon>RunForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\SimulationParametersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\SimulationParametersForm.Designer.cs">
+      <DependentUpon>SimulationParametersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FluentSetForm\SolverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FluentSetForm\SolverForm.Designer.cs">
+      <DependentUpon>SolverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PSDSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PSDSForm.Designer.cs">
+      <DependentUpon>PSDSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="FluentSetForm\BoundaryConditionsForm.resx">
+      <DependentUpon>BoundaryConditionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\MassFlowInletMomentumTabForm.resx">
+      <DependentUpon>MassFlowInletMomentumTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\MassFlowOutletMomentumTabForm.resx">
+      <DependentUpon>MassFlowOutletMomentumTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\PressureInletMomentumTabForm.resx">
+      <DependentUpon>PressureInletMomentumTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\PressureOutletMomentumTabForm.resx">
+      <DependentUpon>PressureOutletMomentumTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\RadiationTabForm.resx">
+      <DependentUpon>RadiationTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\SpeciesTabForm.resx">
+      <DependentUpon>SpeciesTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\ThermalTabForm.resx">
+      <DependentUpon>ThermalTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\BoundaryTypeForm\VelocityInletMomentumTabForm.resx">
+      <DependentUpon>VelocityInletMomentumTabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\CalculationDataExportForm.resx">
+      <DependentUpon>CalculationDataExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\InitiallizationForm.resx">
+      <DependentUpon>InitiallizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\MaterialsForm.resx">
+      <DependentUpon>MaterialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\MethodsForm.resx">
+      <DependentUpon>MethodsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\ModelForm.resx">
+      <DependentUpon>ModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\ModelsForm.resx">
+      <DependentUpon>ModelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\ProfileSimulationParametersForm.resx">
+      <DependentUpon>ProfileSimulationParametersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\RunCalculationForm.resx">
+      <DependentUpon>RunCalculationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\RunForm.resx">
+      <DependentUpon>RunForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\SimulationParametersForm.resx">
+      <DependentUpon>SimulationParametersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FluentSetForm\SolverForm.resx">
+      <DependentUpon>SolverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PSDSForm.resx">
+      <DependentUpon>PSDSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
